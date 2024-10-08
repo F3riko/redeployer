@@ -1,0 +1,28 @@
+{
+  "name": "redeployer",
+  "author": "Andrew",
+  "productName": "Vehicle Redeployer",
+  "version": "1.0.0",
+  "description": "Vehicle Redeployment App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "electron-store": "^10.0.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^25.1.7",
+    "electron-packager": "^17.1.0",
+    "electron": "^25.3.1"
+  },
+  "build": {
+    "asar": false,
+    "mac": {
+      "target": "dmg"
+    }
+  }
+}
